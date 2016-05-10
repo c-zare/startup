@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+
+<div class="row">
+	<div class="col-lg-12">
+
+		<!-- Data Header -->
+		<h4 class="text-muted">Materiais</h4>	
+		
+	</div>
+</div>
+
+{% endblock	%}
+
+
+{% block main %}
+
+<div class="row">
+	<div class="col-lg-12">
+
+		<!-- Data Main -->
+
+		{% for estoque in estoques %}
+		
+			<div class='col-sm-4'><a href="#">{{ estoque.nome }}</a></div>
+			<div class='col-sm-4'><a href="#"><a href="#">{{ estoque.categoria.nome }}</a></div>
+			<div class='col-sm-4'><a href="#"><a href="#">{{ estoque.local.nome }}</a></div>
+
+
+
+			{% if forloop.last %}
+				{% if forloop.counter|divisibleby:8 %}{% else %}<p>&nbsp;</p>{% endif %}
+			{% endif %}
+			{% if forloop.last %}
+				{% if forloop.counter|divisibleby:7 %}{% else %}<p>&nbsp;</p>{% endif %}
+			{% endif %}
+			{% if forloop.last %}
+				{% if forloop.counter|divisibleby:6 %}{% else %}<p>&nbsp;</p>{% endif %}
+			{% endif %}
+			{% if forloop.last %}
+				{% if forloop.counter|divisibleby:5 %}{% else %}<p>&nbsp;</p>{% endif %}
+			{% endif %}
+			{% if forloop.last %}
+				{% if forloop.counter|divisibleby:4 %}{% else %}<p>&nbsp;</p>{% endif %}
+			{% endif %}
+			{% if forloop.last %}
+				{% if forloop.counter|divisibleby:3 %}{% else %}<p>&nbsp;</p>{% endif %}
+			{% endif %}
+			{% if forloop.last %}
+				{% if forloop.counter|divisibleby:2 %}{% else %}<p>&nbsp;</p>{% endif %}
+			{% endif %}
+			{% if forloop.last %}
+				{% if forloop.counter|divisibleby:1 %}{% else %}<p>&nbsp;</p>{% endif %}
+			{% endif %}
+
+		{% endfor %}
+			
+	</div>
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+
+<div class="row">
+	<div class="col-lg-12">
+
+		<!-- Data Footer -->
+	
+	</div>
+</div>
+
+{% endblock %}
