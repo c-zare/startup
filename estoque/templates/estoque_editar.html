@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+
+<div class="row">
+	<div class="col-lg-12">
+
+		<!-- Data Header -->
+		
+	</div>
+</div>
+
+{% endblock	%}
+
+
+{% block main %}
+<div class="row">
+	<div class="col-lg-12">
+
+		<!-- Data Main -->
+		
+		<div id="main" class="container-fluid">
+			<!-- /top -->
+			<div id="top" class="row">
+			    <div class="col-md-5">
+			        <h3 class='text-muted'>Materiais -> Ítens -> Editar</h3>
+			    </div>
+			 
+			    <div class="col-md-4">
+			    </div>
+			 
+			    <div class="col-md-3">
+			        <a href="{% url 'index' %}" class="btn btn-primary pull-right h2">Retornar</a>
+			    </div>
+			</div>
+			<!-- /#top -->
+			
+			<!-- /list -->
+			<br>
+	
+	<ul>
+		<li>{{ estoque.nome }}</li>
+		<li>{{ estoque.custo }}</li>
+		<li>{{ estoque.quantidade }}</li>
+		<li>{{ estoque.reposicao }}</li>
+		<li>{{ estoque.categoria.nome }}</li>
+		<li>{{ estoque.local.nome }}</li>
+	</ul>
+
+	</div>  <!-- /#main -->
+
+
+			
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+
+<div class="row">
+	<div class="col-lg-12">
+
+		<!-- Data Footer -->
+	
+	</div>
+</div>
+
+{% endblock %}
